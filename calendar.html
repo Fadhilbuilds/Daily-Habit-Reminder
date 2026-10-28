@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | HabitFlow</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="page-calendar">
+    <div class="container">
+
+    <header class="app-header">
+
+       <a href="index.html" class="brand">
+          <span class="brand-icon">
+            <i data-lucide="check-check"></i>
+          </span>
+          <span class="brand-name">HabitFlow</span>
+       </a>
+
+       <nav class="main-nav">
+        <a href="index.html" class="nav-link">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="habits.html" class="nav-link ">
+            <i data-lucide="list-checks"></i>
+            <span>My Habits</span>
+        </a>
+
+        <a href="calendar.html" class="nav-link active" aria-current="page">
+            <i data-lucide="calendar-days"></i>
+            <span>Calendar</span>
+        </a>
+
+        <a href="progress.html" class="nav-link">
+            <i data-lucide="chart-no-axes-combined"></i>
+            <span>Analytics</span>
+        </a>
+       </nav>
+
+    </header>
+
+        <h1> Habit Calendar</h1>
+
+        <p>Review your consistency and celebrate every completed day.</p>
+
+        <div class="habit-form">
+
+        <input type="text" id="habitInput" placeholder="Enter a habit...">
+        
+        <select id="habitCategory">
+             <option value="">Choose a category</option>
+             <option value="Exercise">🏃 Exercise</option>
+             <option value="Study">📚 Study</option>
+             <option value="Health">💧 Health</option>
+             <option value="Worship">🕌 Worship</option>
+             <option value="Chores">🧹 Chores</option>
+        </select>
+
+        <input type="time" id="habitTime" >
+
+        <button id="addHabitBtn">Add Habit</button>
+
+        </div>
+
+        <div class="habit-list">
+
+          <h2>My Habits</h2>
+
+         <div id="habits"></div>
+
+         <section class="all-habits-calendar">
+             <h2>Completion Calendar</h2>
+             <p>Track the days you completed your habits.</p>
+
+          <div id="allHabitsCalendar"></div>
+         </section>
+
+        </div>
+
+        <div class="dashboard">
+
+          <h2>My Progress 📊</h2>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                 <h3>Total Habits</h3>
+                 <p id="totalHabits">0</p>
+                </div>
+
+                <div class="stat-card">
+                 <h3>Completed Today</h3>
+                 <p id="completedToday">0</p>
+                </div>
+
+                <div class="stat-card">
+                 <h3>Total Days</h3>
+                 <p id="totalDays">0</p>
+                </div>
+
+                <div class="stat-card">
+                 <h3>Completion Rate</h3>
+                 <p id="completionRate">0%</p>
+                </div>
+                
+                <div class="stat-card">
+                 <h3>Longest Streak</h3>
+                 <p id="longestStreak">0</p>
+                </div>
+
+        </div>  
+
+    </div>    
+
+     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+     <script>
+       lucide.createIcons();
+     </script>
+     <script src="script.js"></script>
+
+
+    
+</body>
+</html>
